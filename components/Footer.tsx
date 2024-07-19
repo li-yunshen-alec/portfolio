@@ -18,7 +18,7 @@ const Footer = () => {
             <h1 className='heading lg:max-w-[45vw]'>
                 Looking to get in touch?
             </h1>
-            <p className='text-white-200 md:mt-10 my-5 text-center'>I'm not currently looking for any new opportunities, but my inbox is always open!</p>
+            <p className='text-white-200 md:mt-10 my-5 text-center'>I&apos;m not currently looking for any new opportunities, but my inbox is always open!</p>
             <a href='mailto:yunshen08@gmail.com'>
                 <MagicButton 
                     title="Say Hello"
