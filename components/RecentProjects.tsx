@@ -7,8 +7,8 @@ const RecentProjects = () => {
   return (
     <div id="projects" className='py-20'>
         <h1 className='heading'>
-            A collection of{' '}
-            <span className='text-purple'>recent projects</span>
+            A small collection of{' '}
+            <span className='text-purple'>other projects</span>
         </h1>
 
         <div className='flex flex-wrap items-center justify-center p-4 gap-x-24 gap-y-8 mt-10'>
@@ -22,7 +22,7 @@ const RecentProjects = () => {
                             <img
                                 src={img}
                                 alt={title}
-                                className='z-10 absolute bottom-0'
+                                className='z-10 absolute -bottom-4 rotate-3 w-[90%] rounded-xl'
                             />
                         </div>
                         <h1 className='font-bold lg:text-2xl md:text-xl text-base line-clamp-1'>
@@ -52,7 +52,7 @@ const RecentProjects = () => {
                             </div>
 
                             <div className='flex justify-center items-center'>
-                                <p className='flex lg:text-xl md:text-xs text-sm text-purple'>Check Live Site</p>
+                                <p className='flex lg:text-xl md:text-xs text-sm text-purple'>Go to Site</p>
                                 <FaLocationArrow className='ms-3' color='#CBACF9'/>
                             </div>
                         </div>
