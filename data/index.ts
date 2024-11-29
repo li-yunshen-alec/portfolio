@@ -72,7 +72,7 @@ export const gridItems = [
 export const projects = [
   {
     id: 1,
-    title: "Coding education non-profit",
+    title: "Kurius",
     des: "Level up or showcase your coding skills at one of many events hosted by Kurius, a coding education non-profit.",
     img: "/kurius.png",
     iconLists: ["/squarespace.svg", "/css2.svg"],
@@ -96,7 +96,7 @@ export const projects = [
   },
   {
     id: 4,
-    title: "Fruit doodle identifier",
+    title: "Fruit Doodle Identifier",
     des: "Check out this machine learning model that can identify your hand-drawn fruits in real-time.",
     img: "/fruitdoodles.png",
     iconLists: ["/flask.svg", "/html.svg", "/css2.svg"],
