@@ -1,66 +1,74 @@
 import { projects } from '@/data'
 import React from 'react'
-import { PinContainer } from './ui/3d-pin'
-import { FaLocationArrow } from 'react-icons/fa6'
+import { FaArrowUpRightFromSquare } from 'react-icons/fa6'
 
 const RecentProjects = () => {
   return (
-    <div id="projects" className='py-20'>
-        <h1 className='heading'>
-            A small collection of{' '}
-            <span className='text-purple'>other projects</span>
-        </h1>
+    <section id="projects" className='relative z-10 pt-32 pb-24'>
+        <div className='h-px w-full bg-gradient-to-r from-transparent via-white/20 to-transparent' />
 
-        <div className='flex flex-wrap items-center justify-center p-4 gap-x-24 gap-y-8 mt-10'>
-            {projects.map(({id, title, des, img, iconLists, link}) => (
-                <div key={id} className='sm:h-[41rem] h-[32rem] lg:min-h-[32.5rem] flex items-center justify-center sm:w-[570px] w-[80vw]'>
-                    <PinContainer title={link} href={link}>
-                        <div className='relative flex items-center justify-center sm:w-[570px] w-[80vw] overflow-hidden sm:h-[40vh] h-[30vh] mb-10'>
-                            <div className='relative w-full h-full overflow-hidden lg:rounded-3xl bg-[#13162d]'>
-                                <img src="/bg.png" alt='bg-img' />
-                            </div>
-                            <img
-                                src={img}
-                                alt={title}
-                                className='z-10 absolute -bottom-4 rotate-3 w-[90%] rounded-xl'
-                            />
+        <div className='mt-10 flex flex-wrap items-center gap-x-4 gap-y-2 font-mono text-[10px] md:text-xs tracking-[0.25em] uppercase text-white/50'>
+            <span className='text-purple'>Archive</span>
+            <span className='h-3 w-px bg-white/20' />
+            <span>Hackathons & side projects</span>
+        </div>
+
+        <div className='mt-8 flex flex-col md:flex-row md:items-end md:justify-between gap-6'>
+            <h2 className='font-bold tracking-tight text-5xl md:text-7xl lg:text-8xl'>
+                Archive
+            </h2>
+            <p className='max-w-md text-base md:text-lg text-white-100 font-light'>
+                A small collection of hackathon wins, early experiments, and things worth keeping around.
+            </p>
+        </div>
+
+        <div className='mt-16 grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8'>
+            {projects.map(({ id, title, des, img, iconLists, link }) => (
+                <a
+                    key={id}
+                    href={link}
+                    target='_blank'
+                    rel='noopener noreferrer'
+                    className='group relative flex flex-col overflow-hidden rounded-2xl border border-white/[.08] bg-white/[.02] hover:border-white/20 transition-colors'
+                >
+                    <div className='aspect-[16/10] overflow-hidden bg-[#13162d]'>
+                        <img
+                            src={img}
+                            alt={title}
+                            className='w-full h-full object-cover transition-transform duration-500 group-hover:scale-[1.03]'
+                        />
+                    </div>
+
+                    <div className='p-6 md:p-8 flex-1 flex flex-col'>
+                        <div className='flex items-start justify-between gap-4'>
+                            <h3 className='font-semibold text-xl md:text-2xl leading-tight'>
+                                {title}
+                            </h3>
+                            <FaArrowUpRightFromSquare className='text-white/40 text-sm mt-1.5 transition-all group-hover:text-purple group-hover:-translate-y-0.5 group-hover:translate-x-0.5' />
                         </div>
-                        <h1 className='font-bold lg:text-2xl md:text-xl text-base line-clamp-1'>
-                            {title}
-                        </h1>
 
-                        <p className='lg:text-xl lg:font-normal font-light text-sm line-clamp-2' style={{
-                            color: "#BEC1DD",
-                            margin: "1vh 0",
-                        }}>
+                        <p className='mt-3 text-white-100 font-light line-clamp-2'>
                             {des}
                         </p>
 
-                        <div className='flex items-center justify-between mt-7 mb-3'>
-                            <div className='flex items-center'>
-                                {iconLists.map((icon, index) => (
-                                    <div
-                                        key={index}
-                                        className="border border-white/[.2] rounded-full bg-black lg:w-10 lg:h-10 w-8 h-8 flex justify-center items-center"
-                                        style={{
-                                            transform: `translateX(-${5 * index + 2}px)`,
-                                        }}
-                                    >
-                                      <img src={icon} alt={icon} className='p-2'/>
-                                    </div>
-                                ))}
-                            </div>
-
-                            <div className='flex justify-center items-center'>
-                                <p className='flex lg:text-xl md:text-xs text-sm text-purple'>Go to Site</p>
-                                <FaLocationArrow className='ms-3' color='#CBACF9'/>
-                            </div>
+                        <div className='mt-auto pt-6 flex items-center'>
+                            {iconLists.map((icon, index) => (
+                                <div
+                                    key={index}
+                                    className='w-8 h-8 rounded-full bg-black/60 border border-white/10 flex items-center justify-center'
+                                    style={{
+                                        transform: `translateX(-${4 * index}px)`,
+                                    }}
+                                >
+                                    <img src={icon} alt={icon} className='p-1.5 w-full h-full' />
+                                </div>
+                            ))}
                         </div>
-                    </PinContainer>
-                </div>
+                    </div>
+                </a>
             ))}
         </div>
-    </div>
+    </section>
   )
 }
 
