@@ -35,7 +35,7 @@ const Cuttr = () => {
         <div className='mt-24 grid grid-cols-3 border-y border-white/10'>
             <div className='py-10 px-4 md:px-8 text-center border-r border-white/10'>
                 <div className='font-bold tracking-tight text-3xl md:text-5xl lg:text-6xl'>
-                    15K<span className='text-purple'>+</span>
+                    30,000<span className='text-purple'>+</span>
                 </div>
                 <div className='mt-3 font-mono text-[10px] md:text-xs tracking-[0.25em] uppercase text-white/50'>
                     Users served

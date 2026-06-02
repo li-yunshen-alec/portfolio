@@ -54,7 +54,7 @@ const Cerevolt = () => {
                     macOS<span className='text-purple'>+</span>Win
                 </div>
                 <div className='mt-3 font-mono text-[10px] md:text-xs tracking-[0.25em] uppercase text-white/50'>
-                    Native clients
+                    Desktop clients
                 </div>
             </div>
         </div>
@@ -84,8 +84,8 @@ const Cerevolt = () => {
                     <p className='mt-2 text-white-100 font-light'>Real-time evaluation of user context and task relevance, powered by intelligent screen and application monitoring pipelines.</p>
                 </div>
                 <div className='py-6'>
-                    <h3 className='font-semibold text-xl md:text-2xl'>Cross-platform native</h3>
-                    <p className='mt-2 text-white-100 font-light'>Built for both macOS and Windows with frictionless onboarding and daily use in mind.</p>
+                    <h3 className='font-semibold text-xl md:text-2xl'>Deep OS integration</h3>
+                    <p className='mt-2 text-white-100 font-light'>Built for both macOS and Windows, leveraging system-level integrations to seamlessly monitor context without adding friction.</p>
                 </div>
                 <div className='py-6'>
                     <h3 className='font-semibold text-xl md:text-2xl'>Habit-forming UX</h3>
